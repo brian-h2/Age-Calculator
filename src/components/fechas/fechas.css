@@ -1,0 +1,19 @@
+.fechas-box-textarea{
+    display: flex;
+}
+
+.fechas-box-textarea .input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.fechas-box-textarea .input-text{
+    width: 100px;
+    margin-left: 0px;
+    margin-right: 30px;
+    border-radius: 8%;
+    border: 1px solid var(--neutral-light-grey);
+    
+}
