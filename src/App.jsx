@@ -1,11 +1,32 @@
+import { useState } from 'react';
 import './app.css';
-import {Fecha} from './components/fechas/Fechas';
+import  Fecha  from './components/fechas/Fecha';
 import { Times } from './components/times/times';
+import Arrow from './components/Arrow/arrow';
+
 export function App() {
+
+    const [date,setDate] = useState({ day: '', month: '', year: '' }); //Definimos un objeto como valor inicial
+
+    const [click, setClick] = useState(false);
+
+    const handleChildClick = (clickStatus) => {
+        setClick(clickStatus);
+        console.log(click);
+    };
+
+    const handleEventChange = (newDate) => {
+        setDate(newDate) //Evento que setea los valores que se pasan desde App
+    }
     return(
         <>
-            <Fecha/>
-            <Times/>
+        <div className="body" >
+            <Fecha onDateChange={handleEventChange} date={date}/>
+            <Arrow onChildClick={handleChildClick}/>
+        
+            
+            <Times  day={date.day} month={date.month} year={date.year}/>
+        </div>   
         </>
         
     )

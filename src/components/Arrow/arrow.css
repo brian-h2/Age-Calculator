@@ -1,0 +1,20 @@
+.box-salto-linea{
+    display: flex;
+    justify-content: center;
+    text-decoration: solid;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    
+}
+
+.box-salto-linea::before{
+    content: url('../../assets/images/icon-arrow.svg');
+    display: block;
+    
+}
+
+.box-salto-linea:hover::before{
+    content: url('../../assets/images/arrow-down.svg');
+    display: block;
+    cursor: pointer;
+}

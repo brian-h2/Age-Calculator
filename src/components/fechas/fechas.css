@@ -1,19 +1,40 @@
 .fechas-box-textarea{
     display: flex;
+    justify-content: space-around;
+    gap: 22px;
+    overflow: hidden;
+   
 }
 
-.fechas-box-textarea .input{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-}
 
 .fechas-box-textarea .input-text{
-    width: 100px;
+    display: flex;
+    width: 100%;
+    max-width: 70px;
     margin-left: 0px;
-    margin-right: 30px;
     border-radius: 8%;
     border: 1px solid var(--neutral-light-grey);
-    
+    transition: 0.2s all ease-in-out;
+    justify-content: space-around;
+    font-size: 19px;
 }
+input{
+    font-weight: 900;
+    padding: 12px 5px 12px 12px;
+}
+
+input:focus{
+    outline: none;
+}
+
+.fechas-box-textarea label{
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--neutral-smokey-grey);
+    text-transform:uppercase;
+    letter-spacing:3px;
+}
+
+
+
+

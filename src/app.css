@@ -1,0 +1,38 @@
+.body{
+    background-color: white;
+    padding: 1rem;
+    border-radius: 3% 3% 24% 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 450px;
+    max-width: 500px;
+    width: 100%;
+    
+}
+
+.box-salto-linea{
+    display: flex;
+    justify-content: center;
+    text-decoration: solid;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    
+}
+
+.box-salto-linea::before{
+    content: url('assets/images/icon-arrow.svg');
+    display: block;
+    
+}
+
+.box-salto-linea:hover::before{
+    content: url('assets/images/arrow-down.svg');
+    display: block;
+    cursor: pointer;
+}
+
+
+
+
