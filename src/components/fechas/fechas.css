@@ -2,8 +2,6 @@
     display: flex;
     justify-content: space-around;
     gap: 22px;
-    overflow: hidden;
-   
 }
 
 
@@ -35,6 +33,23 @@ input:focus{
     letter-spacing:3px;
 }
 
+@media screen and (min-width: 600px) {
+    .fechas-box-textarea{
+        margin-top: 3rem;
+    }
 
+}
+
+@media screen and (min-width:  1300px) {    
+   
+    .fechas-box-textarea .input-text{
+        max-width: 90px;
+    }
+
+    .fechas-box-textarea label{
+        font-size: 14px;
+        font-weight: 800;
+    }
+}
 
 

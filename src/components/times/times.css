@@ -12,10 +12,18 @@
     font-size: 51px;
     font-weight: 800;
     text-transform: lowercase;
+    font-style: italic;
 }
 
 .times-box span{
     color: var(--primary-color)
+}
+
+@media screen and (min-width: 1300px) {
+  
+    .times-box p{ 
+        font-size: 4rem;
+    }
 }
 
 

@@ -30,6 +30,7 @@ body{
     max-width: 1200px;
     background-color: var(--neutral-off-white);
     width: 100%;
+    margin: auto;
 }
 
 .index{
@@ -43,11 +44,3 @@ body{
 }  
 
 
-
-@media(min-width: 375px) {
-
-}
-
-@media(min-width: 1440px) {
-
-}

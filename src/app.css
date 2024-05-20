@@ -12,27 +12,13 @@
     
 }
 
-.box-salto-linea{
-    display: flex;
-    justify-content: center;
-    text-decoration: solid;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    
+@media screen and (min-width:  1300px) {
+    .body{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        height: 480px;
+    }
 }
-
-.box-salto-linea::before{
-    content: url('assets/images/icon-arrow.svg');
-    display: block;
-    
-}
-
-.box-salto-linea:hover::before{
-    content: url('assets/images/arrow-down.svg');
-    display: block;
-    cursor: pointer;
-}
-
-
 
 

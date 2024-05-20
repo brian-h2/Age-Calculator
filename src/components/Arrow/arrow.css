@@ -1,9 +1,22 @@
+.box-arrow{
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.box-arrow hr{
+    width: 100%;
+    margin-right: -30px;
+}
+
 .box-salto-linea{
+    text-decoration: solid;  
     display: flex;
+    align-items: center;
     justify-content: center;
-    text-decoration: solid;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    border: none;
+    margin-top: 16px;
+    margin-bottom: 12px;
     
 }
 
@@ -18,3 +31,29 @@
     display: block;
     cursor: pointer;
 }
+
+@media screen and (max-width:600px) {
+    .box-arrow{
+        position: relative;
+        margin-bottom: 4rem;
+        margin-top: 3rem;
+    }   
+
+    .box-arrow .box-salto-linea{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -60%);
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .box-arrow{
+        position: relative;
+        margin-bottom: -1rem;
+    }
+
+
+}
+
+
