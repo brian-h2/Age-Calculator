@@ -6,7 +6,6 @@ import Arrow from './components/Arrow/arrow';
 
 export function App() {
 
-    //Verificar que los datos se muestran aunque en algunas casillas falten datos
 
     const [date,setDate] = useState({ day: '', month: '', year: '' }); //Definimos un objeto como valor inicial
 

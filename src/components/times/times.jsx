@@ -3,44 +3,71 @@ import './times.css';
 
 export function Times({day,month,year,click}) {
 
-    //Se debe hacer un evento que al darle enter renderice los datos, antes deberiamos tener una condicional 
-    //Controlar que los numeros mostrados no se vuelvan negativos
-
     const [years, setYears] = useState("--");
     const [months, setMonths] = useState("--");
     const [days, setDays] = useState("--");
 
 
-    const fecha = new Date();
-    let yearNow = fecha.getFullYear();
-    let hoy = fecha.getDate();
-    let mesActual = fecha.getMonth() + 1; 
-
-
     const evaluateInputs = () => {
-        if(day <= 0 || day > 31) {
-            alert("Verifique la casilla day")
-            setDays("--")
+        
+        const currentDate = new Date();
+        const hoy = currentDate.getDate();
+        const mesActual = currentDate.getMonth() + 1; 
+        const yearNow = currentDate.getFullYear();
+    
+        if (day <= 0 || day > 31) {
+            Toastify({
+                text: "Verifique la casilla day", 
+                duration: 1500,
+                gravity: "top", 
+                position: "center", 
+                stopOnFocus: true, 
+                style: {
+                    background: "linear-gradient(180deg, #854dff, #dedede)",
+                  },
+            }).showToast();
+            resetResults()  
+            return;    
         } else {
-            let resultDays = hoy - day
-            resultDays = Math.abs(resultDays);
-            setDays(resultDays)
+            const resultDays = Math.abs(hoy - day);
+            setDays(resultDays);
         }
-
-        if(month <= 0 || month > 12) {
-            alert("Verifique la casilla month")
-            setMonths("--")
-        } else{
-            let resultMonths = mesActual - month
-            resultMonths = Math.abs(resultMonths); //Permite devolver el valor absoluto
-            setMonths(resultMonths)
-        }
-
-        if(year > yearNow || year <= 0) {
-            alert("Verifique la casilla year")
-            setYears("--")
+    
+        if (month <= 0 || month > 12) {
+            Toastify({
+                text: "Verifique la casilla month", 
+                duration: 1500,
+                gravity: "top", 
+                position: "center", 
+                stopOnFocus: true,
+                style: {
+                    background: "linear-gradient(180deg, #854dff, #dedede)",
+                  },
+            }).showToast();  
+            resetResults() 
+            return;  
         } else {
-            setYears(yearNow - year)
+            const resultMonths = Math.abs(mesActual - month);
+            setMonths(resultMonths);
+        }
+    
+        if (year > yearNow || year <= 0) {
+            Toastify({
+                text: "Verifique la casilla year", 
+                duration: 1500,
+                gravity: "top", 
+                position: "center", 
+                stopOnFocus: true, 
+                style: {
+                    background: "linear-gradient(180deg, #854dff, #dedede)",
+                  },
+        
+            }).showToast();   
+            resetResults()
+            return;  
+        } else {
+            const resultYears = yearNow - year;
+            setYears(resultYears);
         }
     }
  
@@ -49,11 +76,15 @@ export function Times({day,month,year,click}) {
             evaluateInputs();
           
         } else {
-            setDays("--")
-            setYears("--")
-            setMonths("--")
+            resetResults()
         }
     }
+
+    const resetResults = () => {
+        setDays("--");
+        setMonths("--");
+        setYears("--");
+    };
 
     useEffect(() => {
         comprobarClick();

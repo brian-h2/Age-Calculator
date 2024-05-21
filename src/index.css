@@ -14,9 +14,10 @@
 
 :root{
     
-    --primary-color:hsl(259, 100%, 65%);
+    --primary-color:#854dff;
     --primary-color2:hsl(0, 100%, 67%);
-    --neutral-white:hsl(0, 0%, 100%);
+    --neutral-white:#ffffff;
+    --neutral-white:#dedede;
     --neutral-off-white:hsl(0, 0%, 94%);
     --neutral-light-grey: hsl(0, 0%, 86%);
     --neutral-smokey-grey: hsl(0, 1%, 44%);
